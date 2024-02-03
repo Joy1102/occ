@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "/root/sunchaoyi/OpenOccupancy3/tools/train.py",
+            "args": [
+                "/root/sunchaoyi/OpenOccupancy3/projects/configs/baselines/LiDAR_128x128x10.py",
+                "--launcher", "pytorch",
+                "--deterministic",
+                "--seed", "0",
+                "--gpus", "2"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "6,7",
+                "PYTHONPATH": "/root/sunchaoyi/OpenOccupancy3/tools:/root/sunchaoyi/OpenOccupancy3",
+                "RANK": "0",
+                "MASTER_ADDR": "localhost",
+                "MASTER_PORT": "29500",
+                "WORLD_SIZE": "1"
+            },
+            
+
+            "console": "integratedTerminal",
+            "cwd": "/root/sunchaoyi/OpenOccupancy3", 
+        },
+    ]
+}
